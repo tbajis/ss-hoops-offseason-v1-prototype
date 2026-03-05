@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StatusBar from "../components/StatusBar";
-import BackBar from "../components/BackBar";
+import TitleBar from "../components/TitleBar";
+import NavBar from "../components/NavBar";
 import DivisionBadge from "../components/DivisionBadge";
 import DivisionFilter from "../components/DivisionFilter";
 import { useTheme } from "../ThemeContext";
@@ -15,10 +16,11 @@ export default function Teams() {
   const filteredTeams = filterTeams(activeFilter);
 
   return (
-    <div className="flex flex-col min-h-full" style={{ backgroundColor: t("surface", mode) }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: t("surface", mode) }}>
       <StatusBar />
-      <BackBar title="Teams" to="/" />
+      <TitleBar title="Teams" />
 
+      <div className="flex-1 overflow-y-auto">
       <div className="flex flex-col gap-4 px-5 pb-5">
         <DivisionFilter active={activeFilter} onChange={setActiveFilter} />
 
@@ -56,6 +58,9 @@ export default function Teams() {
           ))}
         </div>
       </div>
+      </div>
+
+      <NavBar />
     </div>
   );
 }
