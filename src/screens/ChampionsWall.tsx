@@ -3,7 +3,8 @@ import { t, teamColor } from "../theme";
 import type { TeamInitials } from "../theme";
 import { championsByYear, records, hallOfFame } from "../data";
 import StatusBar from "../components/StatusBar";
-import BackBar from "../components/BackBar";
+import TitleBar from "../components/TitleBar";
+import NavBar from "../components/NavBar";
 import SectionLabel from "../components/SectionLabel";
 import DivisionBadge from "../components/DivisionBadge";
 
@@ -13,10 +14,11 @@ export default function ChampionsWall() {
   const historyYears = championsByYear.filter((y) => y.year < 2024);
 
   return (
-    <div className="flex flex-col min-h-full" style={{ backgroundColor: t("surface", mode) }}>
+    <div className="flex flex-col h-full" style={{ backgroundColor: t("surface", mode) }}>
       <StatusBar />
-      <BackBar title="Champions Wall" to="/" />
+      <TitleBar title="Champions Wall" />
 
+      <div className="flex-1 overflow-y-auto">
       <div className="flex flex-col gap-6 px-5 pb-5">
 
         {/* 1. 2024 Champions Card */}
@@ -311,6 +313,9 @@ export default function ChampionsWall() {
         </div>
 
       </div>
+      </div>
+
+      <NavBar />
     </div>
   );
 }
