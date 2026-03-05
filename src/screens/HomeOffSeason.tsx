@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useTheme } from "../ThemeContext";
 import { t, teamColor } from "../theme";
 import type { TeamInitials } from "../theme";
@@ -10,7 +9,6 @@ import DivisionBadge from "../components/DivisionBadge";
 
 export default function HomeOffSeason() {
   const { mode } = useTheme();
-  const navigate = useNavigate();
   const champs2024 = championsByYear[0].champions;
 
   return (
@@ -168,57 +166,7 @@ export default function HomeOffSeason() {
             ))}
           </div>
 
-          {/* 4. Nav Cards */}
-          <div className="flex gap-3">
-            <button
-              onClick={() => navigate("/champions")}
-              className="flex-1 flex flex-col rounded-[24px] py-5 px-4 cursor-pointer text-left"
-              style={{
-                backgroundColor: t("surfaceContainerLow", mode),
-                boxShadow: "0 1px 3px #0000001A",
-                border: "none",
-              }}
-            >
-              <span className="text-[24px]">🏆</span>
-              <span
-                className="text-[14px] font-medium"
-                style={{ color: t("onSurface", mode) }}
-              >
-                History
-              </span>
-              <span
-                className="text-[12px] font-normal"
-                style={{ color: t("onSurfaceVariant", mode) }}
-              >
-                Champions &amp; records
-              </span>
-            </button>
-            <button
-              onClick={() => navigate("/teams")}
-              className="flex-1 flex flex-col rounded-[24px] py-5 px-4 cursor-pointer text-left"
-              style={{
-                backgroundColor: t("surfaceContainerLow", mode),
-                boxShadow: "0 1px 3px #0000001A",
-                border: "none",
-              }}
-            >
-              <span className="text-[24px]">👥</span>
-              <span
-                className="text-[14px] font-medium"
-                style={{ color: t("onSurface", mode) }}
-              >
-                Teams
-              </span>
-              <span
-                className="text-[12px] font-normal"
-                style={{ color: t("onSurfaceVariant", mode) }}
-              >
-                Rosters &amp; stats
-              </span>
-            </button>
-          </div>
-
-          {/* 5. Dynasty Tracker */}
+          {/* 4. Dynasty Tracker */}
           <div className="flex flex-col gap-2">
             <SectionLabel label="Dynasty Tracker" />
             <div
