@@ -13,7 +13,7 @@ export default function DivisionFilter({ active, onChange }: DivisionFilterProps
   const { mode } = useTheme();
   return (
     <div
-      className="inline-flex rounded-full h-[36px] overflow-hidden"
+      className="inline-flex self-start rounded-full h-[36px] overflow-hidden"
       style={{
         backgroundColor: t("surfaceContainerLow", mode),
         border: `1px solid ${t("outlineVariant", mode)}`,
