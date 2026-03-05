@@ -212,7 +212,7 @@ export default function HomeOffSeason() {
             </div>
           </div>
 
-          {/* 6. Throwback Moment */}
+          {/* 5. Throwback Moment */}
           <div className="flex flex-col gap-2">
             <SectionLabel emoji="📸" label="Throwback Moment" />
             <div
