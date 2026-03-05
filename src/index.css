@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-surface-light: #FBFDF8;
+  --color-surface-dark: #0E1610;
+  --color-surface-container-low-light: #F3F5F0;
+  --color-surface-container-low-dark: #1A231B;
+  --color-surface-container-high-light: #E8EAE5;
+  --color-surface-container-high-dark: #252D26;
+
+  /* Text */
+  --color-on-surface-light: #191C19;
+  --color-on-surface-dark: #E1E3DE;
+  --color-on-surface-variant-light: #414941;
+  --color-on-surface-variant-dark: #C1C9BF;
+
+  /* Primary */
+  --color-primary-light: #006D40;
+  --color-primary-dark: #6FDE9A;
+  --color-primary-container-light: #94F7BA;
+  --color-primary-container-dark: #005230;
+  --color-on-primary-container-light: #002110;
+  --color-on-primary-container-dark: #94F7BA;
+
+  /* Secondary */
+  --color-secondary-container-light: #D0E8D5;
+  --color-secondary-container-dark: #374B3C;
+  --color-on-secondary-container-light: #0B1F13;
+  --color-on-secondary-container-dark: #D0E8D5;
+
+  /* Gold (champions) */
+  --color-gold-container-light: #FFE170;
+  --color-gold-container-dark: #524600;
+  --color-on-gold-container-light: #221B00;
+  --color-on-gold-container-dark: #FFE170;
+
+  /* Outline */
+  --color-outline-variant-light: #C1C9BF;
+  --color-outline-variant-dark: #414941;
+
+  /* Green/teal tints */
+  --color-green-tint-light: #006D4014;
+  --color-green-tint-dark: #6FDE9A14;
+  --color-teal-tint-light: #38647114;
+  --color-teal-tint-dark: #A1CED914;
+
+  /* Team colors */
+  --color-team-ss-light: #00A651;
+  --color-team-ss-dark: #66BB6A;
+  --color-team-ht-light: #1565C0;
+  --color-team-ht-dark: #64B5F6;
+  --color-team-a-light: #F9A825;
+  --color-team-a-dark: #FFD54F;
+  --color-team-sk-light: #29B6F6;
+  --color-team-sk-dark: #4FC3F7;
+  --color-team-sg-light: #800020;
+  --color-team-sg-dark: #E57373;
+  --color-team-b-light: #212121;
+  --color-team-b-dark: #9E9E9E;
+
+  /* Fonts */
+  --font-sans: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  background: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
